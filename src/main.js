@@ -1,32 +1,26 @@
 import {createApp} from 'vue'
 import {createPinia} from 'pinia'
-import {createVuestic} from "vuestic-ui"
-import "vuestic-ui/css"
-import "material-design-icons-iconfont/dist/material-design-icons.min.css"
+
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+import 'bootstrap-icons/font/bootstrap-icons.css'
+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 
 import App from './App.vue'
 import router from './router'
+import {useThemeStore} from "@/stores/themeStore.js";
 
 const app = createApp(App)
 
-app.use(createVuestic({
-    config: {
-        colors: {
-            variables: {
-                // Default colors
-                primary: "#23e066",
-                secondary: "#002c85",
-                success: "#40e583",
-                info: "#2c82e0",
-                danger: "#e34b4a",
-                warning: "#ffc200",
-                gray: "#babfc2",
-                dark: "#34495e",
-            },
-        },
-    },
-}))
-app.use(createPinia())
+const pinia = createPinia();
+pinia.use(piniaPluginPersistedstate)
+app.use(pinia)
+
+const themeStore = useThemeStore()
+if (themeStore.theme) {
+    document.body.setAttribute('data-bs-theme', themeStore.theme)
+}
+
 app.use(router)
 
 app.mount('#app')
