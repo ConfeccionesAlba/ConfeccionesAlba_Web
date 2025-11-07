@@ -4,9 +4,13 @@ import Footer from "@/components/layout/Footer.vue";
 </script>
 
 <template>
-  <Header/>
-  <RouterView/>
-  <Footer/>
+  <div class="d-flex flex-column py-2 min-vh-100 container-md">
+    <Header/>
+    <main class="flex-grow-1 mx-lg-auto w-100">
+      <RouterView/>
+    </main>
+    <Footer/>
+  </div>
 </template>
 
 <style scoped>
