@@ -36,3 +36,5 @@ npm run dev
 ```sh
 npm run build
 ```
+
+![Alt](https://repobeats.axiom.co/api/embed/0ccd27d0a2401ad8b1714dc6208d8930f7f3a291.svg "Repobeats analytics image")
