@@ -20,6 +20,11 @@ const router = createRouter({
             name: APP_ROUTE_NAMES.PRODUCTS,
             component: () => import('@/views/ProductsView.vue')
         },
+        {
+            path: '/:catchAll(.*)',
+            name: APP_ROUTE_NAMES.NOT_FOUND,
+            component: () => import('@/components/NotFound.vue')
+        }
     ],
 })
 
