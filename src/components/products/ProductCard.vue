@@ -1,17 +1,24 @@
-<script setup>
-defineProps({
-  product: {
-    type: Object,
-    required: true
-  }
-})
+<script setup lang="ts">
+interface Product {
+  id: number;
+  name: string;
+  image: string;
+  price?: number;
+  description?: string;
+}
+
+interface Props {
+  product: Product
+}
+
+const props = defineProps<Props>();
 </script>
 
 <template>
   <div class="card product-card">
-    <img :src="product.image" class="card-img-top" :alt="product.name">
+    <img :src="props.product.image" class="card-img-top" :alt="props.product.name">
     <div class="card-body">
-      <h5 class="card-title">{{ product.name }}</h5>
+      <h5 class="card-title">{{ props.product.name }}</h5>
     </div>
   </div>
 </template>

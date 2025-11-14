@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import {APP_ROUTE_NAMES} from "@/constants/routeNames.js";
 import {useThemeStore} from "@/stores/themeStore.js";
 
