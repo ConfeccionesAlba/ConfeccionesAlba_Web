@@ -1,4 +1,5 @@
-<script setup>
+<script setup lang="ts">
+// TODO: check a better ts way to define a prop
 defineProps({
   product: {
     type: Object,

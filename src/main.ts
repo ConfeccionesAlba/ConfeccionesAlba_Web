@@ -8,7 +8,7 @@ import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 
 import App from './App.vue'
 import router from './router'
-import {useThemeStore} from "@/stores/themeStore.js";
+import {useThemeStore} from "@/stores/themeStore.ts";
 
 const app = createApp(App)
 
@@ -18,7 +18,7 @@ app.use(pinia)
 
 const themeStore = useThemeStore()
 if (themeStore.theme) {
-    document.body.setAttribute('data-bs-theme', themeStore.theme)
+  document.body.setAttribute('data-bs-theme', themeStore.theme)
 }
 
 app.use(router)
