@@ -6,6 +6,7 @@ import {TOKEN_NAME} from "@/constants/constants.ts";
 import router from "@/router";
 import {APP_ROUTE_NAMES} from "@/constants/routeNames.ts";
 import authService from "@/services/authService.ts";
+import { decodeToken } from "@/utils/tokenUtils.ts";
 import {AxiosError} from "axios";
 
 export const useAuthStore = defineStore('authStore', () => {
@@ -28,24 +29,6 @@ export const useAuthStore = defineStore('authStore', () => {
         return isAuthenticated.value && user.role === 'Admin'
     })
 
-    function decodeToken(token: string) {
-        const parts = token.split('.');
-        if (parts.length !== 3) {
-            throw new Error('Invalid token format')
-        }
-
-        // TODO: check the correct properties returned by the parsed token
-        const payload = JSON.parse(atob(parts[1] as string))
-
-        const user: IUser = {
-            id: payload.id,
-            name: payload.name,
-            email: payload.email,
-            role: payload.role
-        }
-
-        return user
-    }
 
     // actions
     function initialize() {
