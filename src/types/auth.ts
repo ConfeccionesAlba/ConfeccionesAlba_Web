@@ -9,3 +9,7 @@ export interface IUser {
     email: string,
     role: string,
 }
+
+export interface ILoginResponse {
+    token: string
+}

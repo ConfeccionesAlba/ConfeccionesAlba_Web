@@ -1,6 +1,7 @@
-import type {ISignInCredentials, IUser} from '@/types/auth.ts'
+import type {ILoginResponse, ISignInCredentials, IUser} from '@/types/auth.ts'
 import api from "@/services/api.ts";
 import {API_ENDPOINT_NAMES} from "@/constants/apiNames.ts";
+import type IApiResponse from "@/types/apiResponse.ts";
 
 export default {
     async signIn(credentials: ISignInCredentials) {
@@ -8,11 +9,18 @@ export default {
         const {email} = credentials;
 
         try {
-            const response = await api.post(API_ENDPOINT_NAMES.LOGIN, credentials)
+            const response = await api.post<IApiResponse<ILoginResponse>>(API_ENDPOINT_NAMES.LOGIN, credentials)
 
             if (response.data.isSuccess) {
-                const {token} = response.data.result
-                const payload = JSON.parse(atob(token.split('.')[1]))
+                const token = response.data.result.token
+
+                const parts = token.split('.');
+                if (parts.length !== 3) {
+                    throw new Error('Invalid token format')
+                }
+
+                // TODO: check the correct properties returned by the parsed token
+                const payload = JSON.parse(atob(parts[1] as string))
 
                 const user: IUser = {
                     id: payload.id,
