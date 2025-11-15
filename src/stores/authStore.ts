@@ -1,12 +1,12 @@
 import {defineStore} from "pinia";
 import {computed, reactive, type Reactive, ref} from "vue";
-import type {ISignInCredentials, IUser} from "@/types/auth.ts";
+import type {ISignInCredentials, IUser} from "@/types/auth";
 import Cookies from "js-cookie";
-import {TOKEN_NAME} from "@/constants/constants.ts";
+import {TOKEN_NAME} from "@/constants/constants";
 import router from "@/router";
-import {APP_ROUTE_NAMES} from "@/constants/routeNames.ts";
-import authService from "@/services/authService.ts";
-import { decodeToken } from "@/utils/tokenUtils.ts";
+import {APP_ROUTE_NAMES} from "@/constants/routeNames";
+import authService from "@/services/authService";
+import {decodeToken} from "@/utils/tokenUtils";
 import {AxiosError} from "axios";
 
 export const useAuthStore = defineStore('authStore', () => {
@@ -57,7 +57,7 @@ export const useAuthStore = defineStore('authStore', () => {
             Object.assign(user, userData)
             isAuthenticated.value = true
 
-            Cookies.set(TOKEN_NAME, token, {expires: 7})
+            Cookies.set(TOKEN_NAME, token, {expires: 7, secure: true, path: '/'})
 
             router.push('/')
             //const { showSuccess } = useSwal()
