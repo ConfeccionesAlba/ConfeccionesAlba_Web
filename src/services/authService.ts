@@ -1,8 +1,8 @@
-import type {ILoginResponse, ISignInCredentials, IUser} from '@/types/auth.ts'
-import api from "@/services/api.ts";
-import {API_ENDPOINT_NAMES} from "@/constants/apiNames.ts";
-import type IApiResponse from "@/types/apiResponse.ts";
-import {decodeToken} from "@/utils/tokenUtils.ts";
+import api from "@/services/api";
+import {API_ENDPOINT_NAMES} from "@/constants/apiNames";
+import type {ILoginResponse, ISignInCredentials} from '@/types/auth'
+import type IApiResponse from "@/types/apiResponse";
+import {decodeToken} from "@/utils/tokenUtils";
 
 export default {
     async signIn(credentials: ISignInCredentials) {
@@ -20,7 +20,7 @@ export default {
                 }
 
             } else {
-                throw new Error('Login failed')
+                throw new Error(response.data.errorMessages.join('\r\n'))
             }
 
         } catch (error) {
