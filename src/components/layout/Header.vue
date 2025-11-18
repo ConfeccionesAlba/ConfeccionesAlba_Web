@@ -63,11 +63,13 @@ const isAuthenticated = computed(() => authStore.isAuthenticated)
           </li>
           <li class="nav-item" v-if="!isAuthenticated">
             <router-link :to="{ name: APP_ROUTE_NAMES.SIGN_IN }" class="nav-link">
-              Login
+              <i class="bi bi-box-arrow-in-right"></i> Login
             </router-link>
           </li>
           <li class="nav-item" v-if="isAuthenticated">
-            <button class="nav-link" @click="authStore.signOut()">Logout</button>
+            <button class="nav-link" @click="authStore.signOut()">
+              <i class="bi bi-box-arrow-right"></i> Logout
+            </button>
           </li>
         </ul>
       </div>
