@@ -72,7 +72,6 @@ onMounted(() => {
           id: product.id,
           name: product.name,
           image: product.image.url,
-          price: product.priceReference,
           description: product.description,
           category: getCategoryName(product.categoryId)
         }"
