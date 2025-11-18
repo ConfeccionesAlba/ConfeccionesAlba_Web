@@ -1,8 +1,13 @@
 <script setup lang="ts">
 import {APP_ROUTE_NAMES} from "@/constants/routeNames.js";
 import {useThemeStore} from "@/stores/themeStore.js";
+import {useAuthStore} from "@/stores/authStore.js";
+import {computed} from "vue";
 
 const themeStore = useThemeStore()
+const authStore = useAuthStore()
+
+const isAuthenticated = computed(() => authStore.isAuthenticated)
 </script>
 
 <template>
@@ -55,6 +60,14 @@ const themeStore = useThemeStore()
                 </button>
               </li>
             </ul>
+          </li>
+          <li class="nav-item" v-if="!isAuthenticated">
+            <router-link :to="{ name: APP_ROUTE_NAMES.SIGN_IN }" class="nav-link">
+              Login
+            </router-link>
+          </li>
+          <li class="nav-item" v-if="isAuthenticated">
+            <button class="nav-link" @click="authStore.signOut()">Logout</button>
           </li>
         </ul>
       </div>
