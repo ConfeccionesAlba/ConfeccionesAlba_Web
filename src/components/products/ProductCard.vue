@@ -3,7 +3,6 @@ interface Product {
   id: number;
   name: string;
   image: string;
-  price?: number;
   description?: string;
   category?: string;
 }
@@ -13,16 +12,6 @@ interface Props {
 }
 
 const props = defineProps<Props>();
-
-// Format price with currency
-const formattedPrice = (price?: number) => {
-  if (!price) return 'Price not available';
-  return new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-    minimumFractionDigits: 2
-  }).format(price);
-};
 </script>
 
 <template>
@@ -32,7 +21,6 @@ const formattedPrice = (price?: number) => {
       <h5 class="card-title">{{ props.product.name }}</h5>
       <p class="card-text product-description">{{ props.product.description }}</p>
       <div class="product-details">
-        <span class="product-price">{{ formattedPrice(props.product.price) }}</span>
         <span v-if="props.product.category" class="product-category">{{ props.product.category }}</span>
       </div>
     </div>
@@ -79,11 +67,6 @@ const formattedPrice = (price?: number) => {
   justify-content: space-between;
   align-items: center;
   margin-top: 1rem;
-}
-
-.product-price {
-  font-weight: 600;
-  color: #42b983;
 }
 
 .product-category {
