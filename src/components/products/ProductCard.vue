@@ -27,7 +27,7 @@ const formattedPrice = (price?: number) => {
 
 <template>
   <div class="card product-card">
-    <img :src="props.product.image" class="card-img-top" :alt="props.product.name">
+    <img :src="props.product.image" class="card-img-top" :alt="props.product.name" loading="lazy">
     <div class="card-body">
       <h5 class="card-title">{{ props.product.name }}</h5>
       <p class="card-text product-description">{{ props.product.description }}</p>
