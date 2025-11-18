@@ -60,6 +60,7 @@ const props = defineProps<Props>();
   margin-bottom: 0.75rem;
   min-height: 3rem;
   display: -webkit-box;
+  line-clamp: 3;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
