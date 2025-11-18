@@ -1,0 +1,100 @@
+<script setup lang="ts">
+import {useRouter} from 'vue-router';
+import {useCategoriesStore} from "@/stores/categoriesStore.ts";
+import type {IProduct} from '@/types/productsResponse';
+
+interface Props {
+  product: IProduct
+}
+
+const props = defineProps<Props>();
+const router = useRouter();
+
+const categoriesStore = useCategoriesStore()
+
+// Function to get category name by ID
+const getCategoryName = (categoryId: number) => {
+  return categoriesStore.getCategoryById(categoryId)?.name || 'Unknown Category';
+};
+
+const viewProductDetails = () => {
+  router.push({name: 'product-detail', params: {id: props.product.id}});
+};
+</script>
+
+<template>
+  <div class="card product-card" @click="viewProductDetails" style="cursor: pointer;">
+    <img :src="props.product.image.url" class="card-img-top" :alt="props.product.name" loading="lazy">
+    <div class="card-body">
+      <h5 class="card-title">{{ props.product.name }}</h5>
+      <p class="card-text product-description">{{ props.product.description }}</p>
+      <div class="product-details">
+        <span v-if="props.product.categoryId" class="product-category">{{
+            getCategoryName(props.product.categoryId)
+          }}</span>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.product-card {
+  margin: 1rem;
+  max-width: 18rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.product-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.75rem;
+  height: 4.2em; /* 3 lines * 1.4em line-height */
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.4em;
+}
+
+
+.product-details {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin-top: auto;
+}
+
+.product-category {
+  background-color: #f0f0f0;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: #666;
+}
+</style>

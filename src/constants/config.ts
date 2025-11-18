@@ -1,0 +1,3 @@
+export const CONFIG_API_URL = import.meta.env.VITE_API_URL
+
+export const CONFIG_IMAGE_URL = import.meta.env.VITE_IMAGE_URL

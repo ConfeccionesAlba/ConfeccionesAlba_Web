@@ -8,7 +8,8 @@ import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 
 import App from './App.vue'
 import router from './router'
-import {useThemeStore} from "@/stores/themeStore.js";
+import {useThemeStore} from "@/stores/themeStore.ts";
+import {useAuthStore} from "@/stores/authStore.ts";
 
 const app = createApp(App)
 
@@ -22,5 +23,8 @@ if (themeStore.theme) {
 }
 
 app.use(router)
+
+const authStore = useAuthStore()
+authStore.initialize()
 
 app.mount('#app')
