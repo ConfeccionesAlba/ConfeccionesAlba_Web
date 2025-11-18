@@ -1,20 +1,21 @@
 <script setup lang="ts">
 import {useRouter} from 'vue-router';
-
-interface Product {
-  id: number;
-  name: string;
-  image: string;
-  description?: string;
-  category?: string;
-}
+import {useCategoriesStore} from "@/stores/categoriesStore.ts";
+import type {IProduct} from '@/types/productsResponse';
 
 interface Props {
-  product: Product
+  product: IProduct
 }
 
 const props = defineProps<Props>();
 const router = useRouter();
+
+const categoriesStore = useCategoriesStore()
+
+// Function to get category name by ID
+const getCategoryName = (categoryId: number) => {
+  return categoriesStore.getCategoryById(categoryId)?.name || 'Unknown Category';
+};
 
 const viewProductDetails = () => {
   router.push({name: 'product-detail', params: {id: props.product.id}});
@@ -23,12 +24,14 @@ const viewProductDetails = () => {
 
 <template>
   <div class="card product-card" @click="viewProductDetails" style="cursor: pointer;">
-    <img :src="props.product.image" class="card-img-top" :alt="props.product.name" loading="lazy">
+    <img :src="props.product.image.url" class="card-img-top" :alt="props.product.name" loading="lazy">
     <div class="card-body">
       <h5 class="card-title">{{ props.product.name }}</h5>
       <p class="card-text product-description">{{ props.product.description }}</p>
       <div class="product-details">
-        <span v-if="props.product.category" class="product-category">{{ props.product.category }}</span>
+        <span v-if="props.product.categoryId" class="product-category">{{
+            getCategoryName(props.product.categoryId)
+          }}</span>
       </div>
     </div>
   </div>

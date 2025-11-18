@@ -10,11 +10,6 @@ const isLoading = ref(false);
 const error = ref<string | null>(null);
 const categoriesStore = useCategoriesStore();
 
-// Function to get category name by ID
-const getCategoryName = (categoryId: number) => {
-  return categoriesStore.getCategoryById(categoryId)?.name || 'Unknown Category';
-};
-
 // Fetch products from API
 const fetchProducts = async () => {
   isLoading.value = true;
@@ -68,13 +63,7 @@ onMounted(() => {
       <ProductCard
           v-for="product in products"
           :key="product.id"
-          :product="{
-          id: product.id,
-          name: product.name,
-          image: product.image.url,
-          description: product.description,
-          category: getCategoryName(product.categoryId)
-        }"
+          :product=product
       />
     </div>
   </div>
