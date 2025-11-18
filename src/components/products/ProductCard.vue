@@ -52,7 +52,6 @@ const props = defineProps<Props>();
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  color: #333;
 }
 
 .product-description {
