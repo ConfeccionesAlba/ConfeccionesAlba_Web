@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import {useRouter} from 'vue-router';
+
 interface Product {
   id: number;
   name: string;
@@ -12,10 +14,15 @@ interface Props {
 }
 
 const props = defineProps<Props>();
+const router = useRouter();
+
+const viewProductDetails = () => {
+  router.push({name: 'product-detail', params: {id: props.product.id}});
+};
 </script>
 
 <template>
-  <div class="card product-card">
+  <div class="card product-card" @click="viewProductDetails" style="cursor: pointer;">
     <img :src="props.product.image" class="card-img-top" :alt="props.product.name" loading="lazy">
     <div class="card-body">
       <h5 class="card-title">{{ props.product.name }}</h5>
