@@ -46,6 +46,9 @@ const props = defineProps<Props>();
 
 .card-body {
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .card-title {
@@ -58,34 +61,23 @@ const props = defineProps<Props>();
   font-size: 0.9rem;
   color: #666;
   margin-bottom: 0.75rem;
-  min-height: 3rem;
+  height: 4.2em; /* 3 lines * 1.4em line-height */
   display: -webkit-box;
   line-clamp: 3;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  position: relative;
   line-height: 1.4em;
 }
 
-.product-description::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 1.8em;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--bs-body-bg, white) 70%);
-  pointer-events: none;
-}
 
 .product-details {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-top: 1rem;
   width: 100%;
+  margin-top: auto;
 }
 
 .product-category {
