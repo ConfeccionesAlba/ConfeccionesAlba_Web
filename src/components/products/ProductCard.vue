@@ -64,9 +64,10 @@ const props = defineProps<Props>();
 
 .product-details {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   margin-top: 1rem;
+  width: 100%;
 }
 
 .product-category {
