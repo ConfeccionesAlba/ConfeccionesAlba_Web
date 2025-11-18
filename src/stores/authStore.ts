@@ -85,10 +85,12 @@ export const useAuthStore = defineStore('authStore', () => {
             email: '',
             role: ''
         })
+        Cookies.remove(TOKEN_NAME)
     }
 
     function signOut() {
         clearAuthData()
+        isAuthenticated.value = false
         router.push({name: APP_ROUTE_NAMES.HOME})
     }
 
