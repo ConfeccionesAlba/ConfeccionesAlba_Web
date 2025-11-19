@@ -168,7 +168,7 @@
   </div>
 
   <div class="container mb-5">
-    <div class="card mb-3 bg-body-tertiary border-0">
+    <div class="card mb-3 bg-warning bg-opacity-25 border-0">
       <div class="card-body">
         <h2 class="card-title text-center mb-3">
           ¿Quieres un producto hecho a medida?
