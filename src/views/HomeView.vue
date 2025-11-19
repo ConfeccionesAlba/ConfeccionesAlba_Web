@@ -92,71 +92,26 @@
   <div class="container mb-5">
     <h2>Galería destacada</h2>
 
-    <div class="row">
-
-      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
-        <div class="h-100">
-          <img src="@/assets/sewing_machine.svg" alt="alt" loading="lazy">
-          <p>Conjunto artesanal terminado - vestido a medida.</p>
+    <div id="carouselExample" class="carousel slide carousel-fade">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="@/assets/sewing_machine.svg" class="d-block w-100" alt="alt" loading="lazy">
+        </div>
+        <div class="carousel-item">
+          <img src="@/assets/sewing_machine.svg" class="d-block w-100" alt="alt" loading="lazy">
+        </div>
+        <div class="carousel-item">
+          <img src="@/assets/sewing_machine.svg" class="d-block w-100" alt="alt" loading="lazy">
         </div>
       </div>
-
-      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
-        <div class="h-100">
-          <img src="@/assets/sewing_machine.svg" alt="alt" loading="lazy">
-          <p>Proceso de costura en taller - detalle de puntada.</p>
-        </div>
-      </div>
-
-      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
-        <div class="h-100">
-          <img src="@/assets/sewing_machine.svg" alt="alt" loading="lazy">
-          <p>Tortas personalizadas listas para entrega.</p>
-        </div>
-      </div>
-
-      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
-        <div class="h-100">
-          <img src="@/assets/sewing_machine.svg" alt="alt" loading="lazy">
-          <p>Tablas de trabajo y herramientas en el taller.</p>
-        </div>
-      </div>
-
-      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
-        <div class="h-100">
-          <img src="@/assets/sewing_machine.svg" alt="alt" loading="lazy">
-          <p>Muñeco artesanal tejido a mano.</p>
-        </div>
-      </div>
-
-      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
-        <div class="h-100">
-          <img src="@/assets/sewing_machine.svg" alt="alt" loading="lazy">
-          <p>Caja de productos comestibles empaquetada para regalo.</p>
-        </div>
-      </div>
-
-      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
-        <div class="h-100">
-          <img src="@/assets/sewing_machine.svg" alt="alt" loading="lazy">
-          <p>Primer plano de tela y textura.</p>
-        </div>
-      </div>
-
-      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
-        <div class="h-100">
-          <img src="@/assets/sewing_machine.svg" alt="alt" loading="lazy">
-          <p>Equipo familiar en el taller sonriendo.</p>
-        </div>
-      </div>
-
-      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
-        <div class="h-100">
-          <img src="@/assets/sewing_machine.svg" alt="alt" loading="lazy">
-          <p>Producto terminado listo para cliente.</p>
-        </div>
-      </div>
-
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
 
   </div>
