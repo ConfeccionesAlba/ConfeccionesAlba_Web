@@ -80,7 +80,7 @@
             <p>
               <strong>Ejemplos:</strong> Muñecos artesanales, decoraciones para fiestas, objetos personalizados.
             </p>
-            <button class="btn btn-secondary mt-auto">Ver confecciones téxtiles</button>
+            <button class="btn btn-secondary mt-auto">Ver otros</button>
           </div>
         </div>
       </div>
