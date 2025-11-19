@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import {APP_ROUTE_NAMES} from "@/constants/routeNames.ts";
 </script>
 
 <template>
@@ -15,7 +16,7 @@
           Hacemos realidad tus ideas: desde un traje especial hasta un postre para tu fiesta.
         </p>
         <div class="d-flex justify-content-center gap-3 mb-3">
-          <router-link to="/products" class="btn btn-success">Ver Productos ️→</router-link>
+          <router-link :to="{name: APP_ROUTE_NAMES.PRODUCTS}" class="btn btn-success">Ver Productos ️→</router-link>
           <!--TODO: Set WhatsApp number-->
           <a href="https://wa.me/+1234567890" target="_blank" rel="noopener noreferrer"
              class="btn btn-outline-secondary">
