@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import {APP_ROUTE_NAMES} from "@/constants/routeNames";
+import {WHATSAPP_NUMBER_URL} from "@/constants/constants";
 </script>
 
 <template>
@@ -15,9 +17,8 @@
           Hacemos realidad tus ideas: desde un traje especial hasta un postre para tu fiesta.
         </p>
         <div class="d-flex justify-content-center gap-3 mb-3">
-          <router-link to="/products" class="btn btn-success">Ver Productos ️→</router-link>
-          <!--TODO: Set WhatsApp number-->
-          <a href="https://wa.me/+1234567890" target="_blank" rel="noopener noreferrer"
+          <router-link :to="{name: APP_ROUTE_NAMES.PRODUCTS}" class="btn btn-success">Ver Productos ️→</router-link>
+          <a :href="WHATSAPP_NUMBER_URL" target="_blank" rel="noopener noreferrer"
              class="btn btn-outline-secondary">
             Contactar por WhatsApp
           </a>
@@ -178,8 +179,7 @@
           Contanos tu idea y te armamos un presupuesto sin compromiso.
         </p>
         <div class="d-flex justify-content-center mb-3">
-          <!--TODO: Set WhatsApp number-->
-          <a href="https://wa.me/+1234567890" target="_blank" rel="noopener noreferrer"
+          <a :href="WHATSAPP_NUMBER_URL" target="_blank" rel="noopener noreferrer"
              class="btn btn-success">
             Contactar por WhatsApp
           </a>

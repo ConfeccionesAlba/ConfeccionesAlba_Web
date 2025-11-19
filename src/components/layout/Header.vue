@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import {APP_ROUTE_NAMES} from "@/constants/routeNames.js";
-import {useThemeStore} from "@/stores/themeStore.js";
-import {useAuthStore} from "@/stores/authStore.js";
+import {APP_ROUTE_NAMES} from "@/constants/routeNames";
+import {useThemeStore} from "@/stores/themeStore";
+import {useAuthStore} from "@/stores/authStore";
 import {computed} from "vue";
+import {WHATSAPP_NUMBER_URL} from "@/constants/constants";
 
 const themeStore = useThemeStore()
 const authStore = useAuthStore()
@@ -18,6 +19,7 @@ const isAuthenticated = computed(() => authStore.isAuthenticated)
              alt="Logo"
              width="28px"
              class="d-inline-block align-text-top me-2">
+        <span class="text-muted opacity-75">Confecciones Alba</span>
       </router-link>
       <button class="navbar-toggler"
               type="button"
@@ -29,7 +31,7 @@ const isAuthenticated = computed(() => authStore.isAuthenticated)
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <router-link :to="{ name: APP_ROUTE_NAMES.HOME }" class="nav-link" aria-current="page">
               Inicio
@@ -42,6 +44,12 @@ const isAuthenticated = computed(() => authStore.isAuthenticated)
           </li>
         </ul>
         <ul class="navbar-nav ms-auto align-items-center small">
+          <li class="nav-item">
+            <a :href="WHATSAPP_NUMBER_URL" target="_blank" rel="noopener noreferrer"
+               class="btn btn-outline-secondary ms-2">
+              Contactar por WhatsApp
+            </a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="bi bi-laptop"></i>
