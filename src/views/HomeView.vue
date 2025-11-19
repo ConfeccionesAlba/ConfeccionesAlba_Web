@@ -178,29 +178,7 @@
       </div>
     </div>
   </div>
-
-
-  <div class="container">
-    <!-- Content here -->
-  </div>
-  <div class="container">
-    <!-- Content here -->
-  </div>
-  <div class="container">
-    <!-- Content here -->
-  </div>
-  <div class="container">
-    <!-- Content here -->
-  </div>
-  <div class="container">
-    <!-- Content here -->
-  </div>
-  <div class="container">
-    <!-- Content here -->
-  </div>
-  <div class="container">
-    <!-- Content here -->
-  </div>
+  
 </template>
 
 <style scoped>
