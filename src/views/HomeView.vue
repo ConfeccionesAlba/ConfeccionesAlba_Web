@@ -31,51 +31,57 @@
   <div class="container mb-5">
     <h2>Nuestras categorías</h2>
 
-    <div class="d-flex gap-4 flex-wrap mt-2">
+    <div class="row">
 
-      <div class="card" style="width: 18rem;">
-        <div class="card-header">
-          Confecciones textiles
-        </div>
-        <div class="card-body d-flex flex-column">
-          <p class="card-text">
-            Ropa a medida, trajes, disfraces y atuendos especiales.
-          </p>
-          <p class="card-text">
-            <strong>Ejemplos:</strong> Vestidos de fiesta, trajes para niños, disfraces temáticos, confecciones para
-            eventos.
-          </p>
-          <button class="btn btn-secondary mt-auto">Ver confecciones téxtiles</button>
+      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+        <div class="card h-100">
+          <div class="card-header">
+            Confecciones textiles
+          </div>
+          <div class="card-body d-flex flex-column">
+            <p class="card-text">
+              Ropa a medida, trajes, disfraces y atuendos especiales.
+            </p>
+            <p class="card-text">
+              <strong>Ejemplos:</strong> Vestidos de fiesta, trajes para niños, disfraces temáticos, confecciones para
+              eventos.
+            </p>
+            <button class="btn btn-secondary mt-auto">Ver confecciones téxtiles</button>
+          </div>
         </div>
       </div>
 
-      <div class="card" style="width: 18rem;">
-        <div class="card-header">
-          Comestibles
-        </div>
-        <div class="card-body d-flex flex-column">
-          <p class="card-text">
-            Productos de pastelería y comestibles caseros, preparados con recetas familiares.
-          </p>
-          <p>
-            <strong>Ejemplos:</strong> Ejemplos: Tortas por encargo, postres, bollería y conservas.
-          </p>
-          <button class="btn btn-secondary mt-auto">Ver comestibles</button>
+      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+        <div class="card h-100">
+          <div class="card-header">
+            Comestibles
+          </div>
+          <div class="card-body d-flex flex-column">
+            <p class="card-text">
+              Productos de pastelería y comestibles caseros, preparados con recetas familiares.
+            </p>
+            <p>
+              <strong>Ejemplos:</strong> Ejemplos: Tortas por encargo, postres, bollería y conservas.
+            </p>
+            <button class="btn btn-secondary mt-auto">Ver comestibles</button>
+          </div>
         </div>
       </div>
 
-      <div class="card" style="width: 18rem;">
-        <div class="card-header">
-          Otros
-        </div>
-        <div class="card-body d-flex flex-column">
-          <p class="card-text">
-            Manualidades y objetos personalizados: muñecos, decoraciones y regalos hechos a mano.
-          </p>
-          <p>
-            <strong>Ejemplos:</strong> Muñecos artesanales, decoraciones para fiestas, objetos personalizados.
-          </p>
-          <button class="btn btn-secondary mt-auto">Ver confecciones téxtiles</button>
+      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+        <div class="card h-100">
+          <div class="card-header">
+            Otros
+          </div>
+          <div class="card-body d-flex flex-column">
+            <p class="card-text">
+              Manualidades y objetos personalizados: muñecos, decoraciones y regalos hechos a mano.
+            </p>
+            <p>
+              <strong>Ejemplos:</strong> Muñecos artesanales, decoraciones para fiestas, objetos personalizados.
+            </p>
+            <button class="btn btn-secondary mt-auto">Ver confecciones téxtiles</button>
+          </div>
         </div>
       </div>
 
