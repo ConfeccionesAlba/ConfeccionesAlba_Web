@@ -1,5 +1,5 @@
-import {createApp} from 'vue'
-import {createPinia} from 'pinia'
+import { createApp } from 'vue'
+import { createPinia } from 'pinia'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
@@ -8,18 +8,18 @@ import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 
 import App from './App.vue'
 import router from './router'
-import {useThemeStore} from "@/stores/themeStore.ts";
-import {useAuthStore} from "@/stores/authStore.ts";
+import { useThemeStore } from '@/stores/themeStore'
+import { useAuthStore } from '@/stores/authStore'
 
 const app = createApp(App)
 
-const pinia = createPinia();
+const pinia = createPinia()
 pinia.use(piniaPluginPersistedstate)
 app.use(pinia)
 
 const themeStore = useThemeStore()
 if (themeStore.theme) {
-    document.body.setAttribute('data-bs-theme', themeStore.theme)
+  document.body.setAttribute('data-bs-theme', themeStore.theme)
 }
 
 app.use(router)

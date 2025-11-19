@@ -1,53 +1,53 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
-import { useRoute } from 'vue-router';
-import productsService from '@/services/productsService';
-import type { IProduct } from '@/types/productsResponse';
-import { useCategoriesStore } from '@/stores/categoriesStore';
+import { ref, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
+import productsService from '@/services/productsService'
+import type { IProduct } from '@/types/productsResponse'
+import { useCategoriesStore } from '@/stores/categoriesStore'
 
-const route = useRoute();
-const product = ref<IProduct | null>(null);
-const isLoading = ref(false);
-const error = ref<string | null>(null);
-const categoriesStore = useCategoriesStore();
+const route = useRoute()
+const product = ref<IProduct | null>(null)
+const isLoading = ref(false)
+const error = ref<string | null>(null)
+const categoriesStore = useCategoriesStore()
 
 // Get product ID from route
-const productId = Number(route.params.id);
+const productId = Number(route.params.id)
 
 // Function to get category name by ID
 const getCategoryName = (categoryId: number) => {
-  return categoriesStore.getCategoryById(categoryId)?.name || 'Unknown Category';
-};
+  return categoriesStore.getCategoryById(categoryId)?.name || 'Unknown Category'
+}
 
 // Fetch product details
 const fetchProduct = async () => {
   if (!productId) {
-    error.value = 'Invalid product ID';
-    return;
+    error.value = 'Invalid product ID'
+    return
   }
 
-  isLoading.value = true;
-  error.value = null;
+  isLoading.value = true
+  error.value = null
 
   try {
     // Fetch categories first to ensure we have category data
-    await categoriesStore.fetchCategories();
+    await categoriesStore.fetchCategories()
 
     // Then fetch the specific product
-    const data = await productsService.getProductById(productId);
-    product.value = data;
+    const data = await productsService.getProductById(productId)
+    product.value = data
   } catch (err) {
-    error.value = 'Failed to load product details. Please try again later.';
-    console.error('Error fetching product:', err);
+    error.value = 'Failed to load product details. Please try again later.'
+    console.error('Error fetching product:', err)
   } finally {
-    isLoading.value = false;
+    isLoading.value = false
   }
-};
+}
 
 // Fetch product when component is mounted
 onMounted(() => {
-  fetchProduct();
-});
+  fetchProduct()
+})
 </script>
 
 <template>
@@ -73,7 +73,7 @@ onMounted(() => {
     <div v-else class="product-details">
       <div class="row">
         <div class="col-md-6">
-          <img :src="product.image.url" class="product-image" :alt="product.name">
+          <img :src="product.image.url" class="product-image" :alt="product.name" />
         </div>
         <div class="col-md-6">
           <h1 class="product-title">{{ product.name }}</h1>
@@ -179,5 +179,4 @@ onMounted(() => {
   font-size: 0.9rem;
   color: #666;
 }
-
 </style>

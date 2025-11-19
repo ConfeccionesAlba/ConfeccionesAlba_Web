@@ -1,42 +1,42 @@
 <script setup lang="ts">
-import {ref, onMounted, computed} from 'vue';
-import productsService from '@/services/productsService';
-import {useCategoriesStore} from '@/stores/categoriesStore';
-import ProductCard from '@/components/products/ProductCard.vue';
-import type {IProduct} from '@/types/productsResponse';
+import { ref, onMounted, computed } from 'vue'
+import productsService from '@/services/productsService'
+import { useCategoriesStore } from '@/stores/categoriesStore'
+import ProductCard from '@/components/products/ProductCard.vue'
+import type { IProduct } from '@/types/productsResponse'
 
-const products = ref<IProduct[]>([]);
-const isLoading = ref(false);
-const error = ref<string | null>(null);
-const categoriesStore = useCategoriesStore();
+const products = ref<IProduct[]>([])
+const isLoading = ref(false)
+const error = ref<string | null>(null)
+const categoriesStore = useCategoriesStore()
 
 // Fetch products from API
 const fetchProducts = async () => {
-  isLoading.value = true;
-  error.value = null;
+  isLoading.value = true
+  error.value = null
 
   try {
     // Fetch categories first to ensure we have category data
-    await categoriesStore.fetchCategories();
+    await categoriesStore.fetchCategories()
 
     // Then fetch products
-    const data = await productsService.getProducts();
-    products.value = data;
+    const data = await productsService.getProducts()
+    products.value = data
   } catch (err) {
-    error.value = 'Failed to load products. Please try again later.';
-    console.error('Error fetching products:', err);
+    error.value = 'Failed to load products. Please try again later.'
+    console.error('Error fetching products:', err)
   } finally {
-    isLoading.value = false;
+    isLoading.value = false
   }
-};
+}
 
 // Computed property to check if there are no products
-const hasProducts = computed(() => products.value.length > 0);
+const hasProducts = computed(() => products.value.length > 0)
 
 // Fetch products when component is mounted
 onMounted(() => {
-  fetchProducts();
-});
+  fetchProducts()
+})
 </script>
 
 <template>
@@ -60,11 +60,7 @@ onMounted(() => {
 
     <!-- Products Grid -->
     <div v-else class="products-grid">
-      <ProductCard
-          v-for="product in products"
-          :key="product.id"
-          :product=product
-      />
+      <ProductCard v-for="product in products" :key="product.id" :product="product" />
     </div>
   </div>
 </template>
