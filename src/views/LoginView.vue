@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import {ref, reactive, onMounted, onUnmounted} from 'vue'
-import {useAuthStore} from '@/stores/authStore'
-import type {ISignInCredentials} from '@/types/auth'
-import {useRouter} from 'vue-router'
+import { ref, reactive, onMounted, onUnmounted } from 'vue'
+import { useAuthStore } from '@/stores/authStore'
+import type { ISignInCredentials } from '@/types/auth'
+import { useRouter } from 'vue-router'
 
 // Form state
 const form = reactive<ISignInCredentials>({
   email: '',
-  password: ''
+  password: '',
 })
 
 // Validation state
@@ -85,16 +85,16 @@ const handleSubmit = async () => {
               <div class="mb-3">
                 <label for="email" class="form-label">Email address</label>
                 <input
-                    type="email"
-                    class="form-control"
-                    :class="{ 'is-invalid': errors.email }"
-                    id="email"
-                    v-model="form.email"
-                    placeholder="Enter your email"
-                    required
-                    autocomplete="username"
-                    spellcheck="false"
-                >
+                  type="email"
+                  class="form-control"
+                  :class="{ 'is-invalid': errors.email }"
+                  id="email"
+                  v-model="form.email"
+                  placeholder="Enter your email"
+                  required
+                  autocomplete="username"
+                  spellcheck="false"
+                />
                 <div v-if="errors.email" class="invalid-feedback">
                   {{ errors.email }}
                 </div>
@@ -104,28 +104,29 @@ const handleSubmit = async () => {
               <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
                 <input
-                    type="password"
-                    class="form-control"
-                    :class="{ 'is-invalid': errors.password }"
-                    id="password"
-                    v-model="form.password"
-                    placeholder="Enter your password"
-                    required
-                    autocomplete="current-password"
-                    spellcheck="false"
-                >
+                  type="password"
+                  class="form-control"
+                  :class="{ 'is-invalid': errors.password }"
+                  id="password"
+                  v-model="form.password"
+                  placeholder="Enter your password"
+                  required
+                  autocomplete="current-password"
+                  spellcheck="false"
+                />
                 <div v-if="errors.password" class="invalid-feedback">
                   {{ errors.password }}
                 </div>
               </div>
 
               <!-- Submit button -->
-              <button
-                  type="submit"
-                  class="btn btn-success w-100"
-                  :disabled="isLoading"
-              >
-                <span v-if="isLoading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+              <button type="submit" class="btn btn-success w-100" :disabled="isLoading">
+                <span
+                  v-if="isLoading"
+                  class="spinner-border spinner-border-sm"
+                  role="status"
+                  aria-hidden="true"
+                ></span>
                 {{ isLoading ? 'Logging in...' : 'Login' }}
               </button>
             </form>
@@ -136,5 +137,4 @@ const handleSubmit = async () => {
   </div>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

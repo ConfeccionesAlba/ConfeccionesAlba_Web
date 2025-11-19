@@ -1,15 +1,15 @@
 export interface ICategory {
-    id: number,
-    name: string,
-    description: string
+  id: number
+  name: string
+  description: string
 }
 
 export interface ICategoryCreate {
-    name: string,
-    description: string
+  name: string
+  description: string
 }
 
 export interface ICategoryUpdate {
-    id: number,
-    description: string
+  id: number
+  description: string
 }
