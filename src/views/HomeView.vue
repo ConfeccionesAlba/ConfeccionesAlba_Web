@@ -94,11 +94,12 @@ import {WHATSAPP_NUMBER_URL} from "@/constants/constants";
 
   </div>
 
-  <!-- TODO: Add some photos to the carousel -->
+  <!-- Gallery section with responsive layouts -->
   <div class="container mb-5">
     <h2>Galería destacada</h2>
 
-    <div id="carouselExample" class="carousel slide">
+    <!-- Mobile carousel - only visible on small screens -->
+    <div id="carouselExample" class="carousel slide d-md-none">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="@/assets/sewing_machine.svg" class="d-block w-100" alt="alt" loading="lazy">
@@ -120,6 +121,18 @@ import {WHATSAPP_NUMBER_URL} from "@/constants/constants";
       </button>
     </div>
 
+    <!-- PC grid layout - only visible on medium screens and up -->
+    <div class="row d-none d-md-flex">
+      <div class="col-md-4 mb-4">
+        <img src="@/assets/sewing_machine.svg" class="img-fluid" alt="alt" loading="lazy">
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="@/assets/sewing_machine.svg" class="img-fluid" alt="alt" loading="lazy">
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="@/assets/sewing_machine.svg" class="img-fluid" alt="alt" loading="lazy">
+      </div>
+    </div>
   </div>
   <div class="container mb-5">
     <h2>Testimonios</h2>
