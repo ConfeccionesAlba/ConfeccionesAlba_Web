@@ -173,12 +173,15 @@
           Cuentanos tu idea y te armamos un presupuesto sin compromiso.
         </p>
         <div class="d-flex justify-content-center mb-3">
-          <button class="btn btn-success">Contactar por WhatsApp</button>
+          <!--TODO: Set WhatsApp number-->
+          <a href="https://wa.me/+1234567890" target="_blank" rel="noopener noreferrer">
+            <button class="btn btn-success">Contactar por WhatsApp</button>
+          </a>
         </div>
       </div>
     </div>
   </div>
-  
+
 </template>
 
 <style scoped>
