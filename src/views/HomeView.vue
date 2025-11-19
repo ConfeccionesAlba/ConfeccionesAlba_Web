@@ -29,7 +29,7 @@
   </div>
 
   <div class="container">
-    <!-- Content here -->
+    <!-- TODO: Talk about the business and the family -->
   </div>
 
   <div class="container mb-5">
@@ -92,6 +92,7 @@
 
   </div>
 
+  <!-- TODO: Add some photos to the carousel -->
   <div class="container mb-5">
     <h2>Galería destacada</h2>
 
