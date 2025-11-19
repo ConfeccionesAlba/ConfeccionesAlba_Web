@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import {APP_ROUTE_NAMES} from "@/constants/routeNames.js";
-import {useThemeStore} from "@/stores/themeStore.js";
-import {useAuthStore} from "@/stores/authStore.js";
+import {APP_ROUTE_NAMES} from "@/constants/routeNames";
+import {useThemeStore} from "@/stores/themeStore";
+import {useAuthStore} from "@/stores/authStore";
 import {computed} from "vue";
+import {WHATSAPP_NUMBER_URL} from "@/constants/constants";
 
 const themeStore = useThemeStore()
 const authStore = useAuthStore()
@@ -43,7 +44,7 @@ const isAuthenticated = computed(() => authStore.isAuthenticated)
         </ul>
         <ul class="navbar-nav ms-auto align-items-center small">
           <li class="nav-item">
-            <a href="https://wa.me/+1234567890" target="_blank" rel="noopener noreferrer"
+            <a :href="WHATSAPP_NUMBER_URL" target="_blank" rel="noopener noreferrer"
                class="btn btn-outline-secondary ms-2">
               Contactar por WhatsApp
             </a>
