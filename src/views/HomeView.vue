@@ -115,8 +115,52 @@
     </div>
 
   </div>
-  <div class="container">
-    <!-- Content here -->
+  <div class="container mb-5">
+    <h2>Testimonios</h2>
+
+    <div class="row">
+
+      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+        <div class="card h-100 bg-body-tertiary border-0">
+          <div class="card-body d-flex flex-column">
+            <p class="card-text">
+              "Excelente trabajo: el traje quedó perfecto y a tiempo."
+            </p>
+            <p class="card-text">
+              <strong>- Mariana R.</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+        <div class="card h-100 bg-body-tertiary border-0">
+          <div class="card-body d-flex flex-column">
+            <p class="card-text">
+              "Comunicación fácil y precio justo."
+            </p>
+            <p class="card-text">
+              <strong>- Jose M.</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+        <div class="card h-100 bg-body-tertiary border-0">
+          <div class="card-body d-flex flex-column">
+            <p class="card-text">
+              "Atención cercana y producto impecable. Volveré a pedir."
+            </p>
+            <p class="card-text">
+              <strong>- Ana P.</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
   </div>
   <div class="container">
     <!-- Content here -->
