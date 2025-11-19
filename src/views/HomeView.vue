@@ -125,7 +125,7 @@
     <div class="row mb-4">
 
       <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch mb-4">
-        <div class="card w-100 bg-body-tertiary border-0">
+        <div class="card w-100 bg-body-tertiary">
           <div class="card-body d-flex flex-column">
             <p class="card-text">
               "Excelente trabajo: el traje quedó perfecto y a tiempo."
@@ -138,7 +138,7 @@
       </div>
 
       <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch mb-4">
-        <div class="card w-100 bg-body-tertiary border-0">
+        <div class="card w-100 bg-body-tertiary">
           <div class="card-body d-flex flex-column">
             <p class="card-text">
               "Comunicación fácil y precio justo."
@@ -151,7 +151,7 @@
       </div>
 
       <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch mb-4">
-        <div class="card w-100 bg-body-tertiary border-0">
+        <div class="card w-100 bg-body-tertiary">
           <div class="card-body d-flex flex-column">
             <p class="card-text">
               "Atención cercana y producto impecable. Volveré a pedir."
