@@ -89,8 +89,76 @@
 
   </div>
 
-  <div class="container">
-    <!-- Content here -->
+  <div class="container mb-5">
+    <h2>Galería destacada</h2>
+
+    <div class="row">
+
+      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+        <div class="h-100">
+          <img src="@/assets/sewing_machine.svg" alt="alt" loading="lazy">
+          <p>Conjunto artesanal terminado - vestido a medida.</p>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+        <div class="h-100">
+          <img src="@/assets/sewing_machine.svg" alt="alt" loading="lazy">
+          <p>Proceso de costura en taller - detalle de puntada.</p>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+        <div class="h-100">
+          <img src="@/assets/sewing_machine.svg" alt="alt" loading="lazy">
+          <p>Tortas personalizadas listas para entrega.</p>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+        <div class="h-100">
+          <img src="@/assets/sewing_machine.svg" alt="alt" loading="lazy">
+          <p>Tablas de trabajo y herramientas en el taller.</p>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+        <div class="h-100">
+          <img src="@/assets/sewing_machine.svg" alt="alt" loading="lazy">
+          <p>Muñeco artesanal tejido a mano.</p>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+        <div class="h-100">
+          <img src="@/assets/sewing_machine.svg" alt="alt" loading="lazy">
+          <p>Caja de productos comestibles empaquetada para regalo.</p>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+        <div class="h-100">
+          <img src="@/assets/sewing_machine.svg" alt="alt" loading="lazy">
+          <p>Primer plano de tela y textura.</p>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+        <div class="h-100">
+          <img src="@/assets/sewing_machine.svg" alt="alt" loading="lazy">
+          <p>Equipo familiar en el taller sonriendo.</p>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+        <div class="h-100">
+          <img src="@/assets/sewing_machine.svg" alt="alt" loading="lazy">
+          <p>Producto terminado listo para cliente.</p>
+        </div>
+      </div>
+
+    </div>
+
   </div>
   <div class="container">
     <!-- Content here -->
