@@ -31,9 +31,9 @@
   <div class="container mb-5">
     <h2>Nuestras categorías</h2>
 
-    <div class="row">
+    <div class="row mb-4">
 
-      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch mb-4">
         <div class="card h-100">
           <div class="card-header">
             Confecciones textiles
@@ -51,7 +51,7 @@
         </div>
       </div>
 
-      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch mb-4">
         <div class="card h-100">
           <div class="card-header">
             Comestibles
@@ -68,7 +68,7 @@
         </div>
       </div>
 
-      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch mb-4">
         <div class="card h-100">
           <div class="card-header">
             Otros
@@ -118,9 +118,9 @@
   <div class="container mb-5">
     <h2>Testimonios</h2>
 
-    <div class="row">
+    <div class="row mb-4">
 
-      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch mb-4">
         <div class="card h-100 bg-body-tertiary border-0">
           <div class="card-body d-flex flex-column">
             <p class="card-text">
@@ -133,7 +133,7 @@
         </div>
       </div>
 
-      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch mb-4">
         <div class="card h-100 bg-body-tertiary border-0">
           <div class="card-body d-flex flex-column">
             <p class="card-text">
@@ -146,7 +146,7 @@
         </div>
       </div>
 
-      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+      <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch mb-4">
         <div class="card h-100 bg-body-tertiary border-0">
           <div class="card-body d-flex flex-column">
             <p class="card-text">
