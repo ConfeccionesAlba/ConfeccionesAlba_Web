@@ -162,6 +162,24 @@
     </div>
 
   </div>
+
+  <div class="container mb-5">
+    <div class="card mb-3 bg-body-tertiary border-0">
+      <div class="card-body">
+        <h2 class="card-title text-center mb-3">
+          ¿Quieres un producto hecho a medida?
+        </h2>
+        <p class="card-text text-center mb-3">
+          Cuentanos tu idea y te armamos un presupuesto sin compromiso.
+        </p>
+        <div class="d-flex justify-content-center mb-3">
+          <button class="btn btn-success">Contactar por WhatsApp</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <div class="container">
     <!-- Content here -->
   </div>
