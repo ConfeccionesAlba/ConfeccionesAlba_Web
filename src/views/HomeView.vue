@@ -92,7 +92,7 @@
   <div class="container mb-5">
     <h2>Galería destacada</h2>
 
-    <div id="carouselExample" class="carousel slide carousel-fade">
+    <div id="carouselExample" class="carousel slide">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="@/assets/sewing_machine.svg" class="d-block w-100" alt="alt" loading="lazy">
@@ -140,3 +140,10 @@
     <!-- Content here -->
   </div>
 </template>
+
+<style scoped>
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1) grayscale(100);
+}
+</style>
