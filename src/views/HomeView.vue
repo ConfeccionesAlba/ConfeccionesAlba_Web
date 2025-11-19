@@ -14,8 +14,12 @@
         <p class="card-text text-center mb-3">
           Transformamos ideas en piezas únicas: desde un traje especial hasta un postre para tu celebración.
         </p>
-        <div class="d-flex justify-content-center mb-3">
+        <div class="d-flex justify-content-center gap-3 mb-3">
           <button class="btn btn-success">Ver Productos ️→</button>
+          <!--TODO: Set WhatsApp number-->
+          <a href="https://wa.me/+1234567890" target="_blank" rel="noopener noreferrer">
+            <button class="btn btn-outline-secondary">Contactar por WhatsApp</button>
+          </a>
         </div>
         <div class="text-center">
           <small class="text-muted">Pedidos personalizados | Entregas locales | Hecho a mano</small>
