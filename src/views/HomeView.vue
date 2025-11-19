@@ -94,6 +94,7 @@ import {WHATSAPP_NUMBER_URL} from "@/constants/constants";
 
   </div>
 
+  <!-- TODO: Add some photos to the carousel -->
   <!-- Gallery section with responsive layouts -->
   <div class="container mb-5">
     <h2>Galería destacada</h2>
