@@ -42,6 +42,12 @@ const isAuthenticated = computed(() => authStore.isAuthenticated)
           </li>
         </ul>
         <ul class="navbar-nav ms-auto align-items-center small">
+          <li class="nav-item">
+            <a href="https://wa.me/+1234567890" target="_blank" rel="noopener noreferrer"
+               class="btn btn-outline-secondary ms-2">
+              Contactar por WhatsApp
+            </a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="bi bi-laptop"></i>
