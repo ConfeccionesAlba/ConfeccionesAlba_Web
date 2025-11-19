@@ -6,13 +6,13 @@
     <div class="card mb-3 bg-body-tertiary border-0">
       <div class="card-body">
         <h2 class="card-title text-center mb-3">
-          Confecciones hechas con dedicación y estilo
+          Confecciones hechas con cariño y estilo
         </h2>
         <p class="card-text text-center mb-3">
-          Ropa a medida, comestibles artesanales y artesanías - todo diseñado por nuestra familia para usted.
+          Ropa a medida, comidas caseras y artesanías - todo hecho por nuestra familia para vos.
         </p>
         <p class="card-text text-center mb-3">
-          Transformamos ideas en piezas únicas: desde un traje especial hasta un postre para tu celebración.
+          Hacemos realidad tus ideas: desde un traje especial hasta un postre para tu fiesta.
         </p>
         <div class="d-flex justify-content-center gap-3 mb-3">
           <button class="btn btn-success">Ver Productos ️→</button>
@@ -40,17 +40,16 @@
       <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch mb-4">
         <div class="card h-100">
           <div class="card-header">
-            Confecciones textiles
+            Confecciones
           </div>
           <div class="card-body d-flex flex-column">
             <p class="card-text">
-              Ropa a medida, trajes, disfraces y atuendos especiales.
+              Ropa a medida, trajes, disfraces y ropa especial.
             </p>
             <p class="card-text">
-              <strong>Ejemplos:</strong> Vestidos de fiesta, trajes para niños, disfraces temáticos, confecciones para
-              eventos.
+              <strong>Ejemplos:</strong> Vestidos de fiesta, trajes para chicos, disfraces temáticos, ropa para eventos.
             </p>
-            <button class="btn btn-secondary mt-auto">Ver confecciones téxtiles</button>
+            <button class="btn btn-secondary mt-auto">Ver confecciones</button>
           </div>
         </div>
       </div>
@@ -58,16 +57,16 @@
       <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch mb-4">
         <div class="card h-100">
           <div class="card-header">
-            Comestibles
+            Comidas
           </div>
           <div class="card-body d-flex flex-column">
             <p class="card-text">
-              Productos de pastelería y comestibles caseros, preparados con recetas familiares.
+              Comidas caseras y dulces, hechos con recetas de la familia.
             </p>
             <p>
-              <strong>Ejemplos:</strong> Ejemplos: Tortas por encargo, postres, bollería y conservas.
+              <strong>Ejemplos:</strong>Tortas a pedido, postres, facturas y conservas.
             </p>
-            <button class="btn btn-secondary mt-auto">Ver comestibles</button>
+            <button class="btn btn-secondary mt-auto">Ver comidas</button>
           </div>
         </div>
       </div>
@@ -79,10 +78,10 @@
           </div>
           <div class="card-body d-flex flex-column">
             <p class="card-text">
-              Manualidades y objetos personalizados: muñecos, decoraciones y regalos hechos a mano.
+              Manualidades y artículos personalizados: muñecos, decoraciones y regalos hechos a mano.
             </p>
             <p>
-              <strong>Ejemplos:</strong> Muñecos artesanales, decoraciones para fiestas, objetos personalizados.
+              <strong>Ejemplos:</strong> Muñecos hechos a mano, decoraciones para fiestas, artículos personalizados.
             </p>
             <button class="btn btn-secondary mt-auto">Ver otros</button>
           </div>
@@ -171,10 +170,10 @@
     <div class="card mb-3 bg-warning bg-opacity-25 border-0">
       <div class="card-body">
         <h2 class="card-title text-center mb-3">
-          ¿Quieres un producto hecho a medida?
+          ¿Querés un producto hecho a medida?
         </h2>
         <p class="card-text text-center mb-3">
-          Cuentanos tu idea y te armamos un presupuesto sin compromiso.
+          Contanos tu idea y te armamos un presupuesto sin compromiso.
         </p>
         <div class="d-flex justify-content-center mb-3">
           <!--TODO: Set WhatsApp number-->
