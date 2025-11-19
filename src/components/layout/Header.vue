@@ -19,6 +19,7 @@ const isAuthenticated = computed(() => authStore.isAuthenticated)
              alt="Logo"
              width="28px"
              class="d-inline-block align-text-top me-2">
+        <span class="text-muted opacity-75">Confecciones Alba</span>
       </router-link>
       <button class="navbar-toggler"
               type="button"
