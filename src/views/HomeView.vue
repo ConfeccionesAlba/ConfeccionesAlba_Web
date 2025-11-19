@@ -15,7 +15,7 @@
           Hacemos realidad tus ideas: desde un traje especial hasta un postre para tu fiesta.
         </p>
         <div class="d-flex justify-content-center gap-3 mb-3">
-          <button class="btn btn-success">Ver Productos ️→</button>
+          <router-link to="/products" class="btn btn-success">Ver Productos ️→</router-link>
           <!--TODO: Set WhatsApp number-->
           <a href="https://wa.me/+1234567890" target="_blank" rel="noopener noreferrer">
             <button class="btn btn-outline-secondary">Contactar por WhatsApp</button>
