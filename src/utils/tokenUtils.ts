@@ -10,9 +10,9 @@ export function decodeToken(token: string): IUser {
   const payload = JSON.parse(atob(parts[1] as string))
 
   return {
-    id: payload.id,
+    id: payload.sub,
     name: payload.name,
     email: payload.email,
-    role: payload.role,
+    role: payload['http://schemas.microsoft.com/ws/2008/06/identity/claims/role'],
   }
 }
