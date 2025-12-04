@@ -14,7 +14,6 @@ export interface IProductCreate {
   categoryId: number
   priceReference: number
   isVisible: boolean
-  file: File
 }
 
 export interface IProductUpdate {
@@ -23,10 +22,13 @@ export interface IProductUpdate {
   categoryId: number | null
   priceReference: number | null
   isVisible: boolean | null
-  file: File | null
 }
 
 export interface IImage {
   name: string
+  url: string
+}
+
+export interface IUploadImageResponse {
   url: string
 }
