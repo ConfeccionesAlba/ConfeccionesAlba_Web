@@ -28,14 +28,14 @@
   "devDependencies": {
     "@tsconfig/node22": "22.0.5",
     "@types/js-cookie": "3.0.6",
-    "@types/node": "22.20.0",
-    "@vitejs/plugin-vue": "6.0.7",
+    "@types/node": "22.20.1",
+    "@vitejs/plugin-vue": "6.0.8",
     "@vue/tsconfig": "0.9.1",
     "npm-run-all2": "8.0.4",
-    "prettier": "3.9.4",
+    "prettier": "3.9.5",
     "typescript": "5.9.3",
     "vite": "7.3.6",
     "vite-plugin-vue-devtools": "8.1.5",
-    "vue-tsc": "3.3.6"
+    "vue-tsc": "3.3.7"
   }
 }
